@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\Sarang\eclipse-workspace\FirstCryAE\testng.xml</span>
+                    <span>C:\Users\Sarang\eclipse-workspace\TDDPOC\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods, 2 failed,   9 passed</span>
+                    <span class="method-stats">11 methods, 3 failed,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -107,7 +107,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.frisrcryae.tests.LandingPageTest" hash-for-method="verifyFirstCryLogoOnHeader_test">verifyFirstCryLogoOnHeader_test</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.frisrcryae.tests.LandingPageTest" hash-for-method="verifyRegisterLinkOnHeader_test">verifyRegisterLinkOnHeader_test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.frisrcryae.tests.LandingPageTest" hash-for-method="verifySearchBoxWorking_test">verifySearchBoxWorking_test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -126,6 +131,11 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.frisrcryae.tests.LandingPageTest" hash-for-method="verifyFirstCryLogoOnHeader_test">verifyFirstCryLogoOnHeader_test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.frisrcryae.tests.LandingPageTest" hash-for-method="verifyFirstCryParentingLinkOnHeader_test">verifyFirstCryParentingLinkOnHeader_test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -136,17 +146,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.frisrcryae.tests.LandingPageTest" hash-for-method="verifyRegisterLinkOnHeader_test">verifyRegisterLinkOnHeader_test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.frisrcryae.tests.LandingPageTest" hash-for-method="verifySearchBoxIsAvailable_test">verifySearchBoxIsAvailable_test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.frisrcryae.tests.LandingPageTest" hash-for-method="verifySearchBoxWorking_test">verifySearchBoxWorking_test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -187,20 +187,40 @@
                   <a name="loginToApp_test">
                   </a> <!-- loginToApp_test -->
                   <span class="method-name">loginToApp_test</span>
-                  <div class="stack-trace">java.lang.AssertionError: loginToApp_test failed unable to locate My Account Webelement expected [true] but found [false]
-	at com.qa.frisrcryae.tests.LandingPageTest.loginToApp_test(LandingPageTest.java:53)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 15 stack frames
+                  <div class="stack-trace">java.lang.NullPointerException: null value in entry: id=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+	at com.google.common.collect.SingletonImmutableBiMap.&lt;init&gt;(SingletonImmutableBiMap.java:42)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:892)
+	at com.qa.frisrcryae.pages.LandingPage.loginToApp(LandingPage.java:100)
+	at com.qa.frisrcryae.tests.LandingPageTest.loginToApp_test(LandingPageTest.java:54)
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyFirstCryLogoOnHeader_test">
-                  </a> <!-- verifyFirstCryLogoOnHeader_test -->
-                  <span class="method-name">verifyFirstCryLogoOnHeader_test</span>
+                  <a name="verifyRegisterLinkOnHeader_test">
+                  </a> <!-- verifyRegisterLinkOnHeader_test -->
+                  <span class="method-name">verifyRegisterLinkOnHeader_test</span>
+                  <div class="stack-trace">java.lang.NullPointerException: null value in entry: id=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+	at com.google.common.collect.SingletonImmutableBiMap.&lt;init&gt;(SingletonImmutableBiMap.java:42)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:892)
+	at com.qa.frisrcryae.pages.LandingPage.verifyRegisterLinkOnHeader(LandingPage.java:158)
+	at com.qa.frisrcryae.tests.LandingPageTest.verifyRegisterLinkOnHeader_test(LandingPageTest.java:79)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchBoxWorking_test">
+                  </a> <!-- verifySearchBoxWorking_test -->
+                  <span class="method-name">verifySearchBoxWorking_test</span>
                   <div class="stack-trace">java.lang.NullPointerException
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
@@ -208,12 +228,9 @@
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	at com.qa.frisrcryae.utills.ElementActions.waitForElementVisible(ElementActions.java:96)
-	at com.qa.frisrcryae.pages.LandingPage.verifyFirstCryLogoOnHeader(LandingPage.java:178)
-	at com.qa.frisrcryae.tests.LandingPageTest.verifyFirstCryLogoOnHeader_test(LandingPageTest.java:90)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 10 stack frames
+	at com.qa.frisrcryae.pages.LandingPage.verifySearchBoxWorking(LandingPage.java:68)
+	at com.qa.frisrcryae.tests.LandingPageTest.verifySearchBoxWorking_test(LandingPageTest.java:43)
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -234,6 +251,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="verifyFirstCryLogoOnHeader_test">
+                  </a> <!-- verifyFirstCryLogoOnHeader_test -->
+                  <span class="method-name">verifyFirstCryLogoOnHeader_test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifyFirstCryParentingLinkOnHeader_test">
                   </a> <!-- verifyFirstCryParentingLinkOnHeader_test -->
                   <span class="method-name">verifyFirstCryParentingLinkOnHeader_test</span>
@@ -248,23 +272,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyRegisterLinkOnHeader_test">
-                  </a> <!-- verifyRegisterLinkOnHeader_test -->
-                  <span class="method-name">verifyRegisterLinkOnHeader_test</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="verifySearchBoxIsAvailable_test">
                   </a> <!-- verifySearchBoxIsAvailable_test -->
                   <span class="method-name">verifySearchBoxIsAvailable_test</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifySearchBoxWorking_test">
-                  </a> <!-- verifySearchBoxWorking_test -->
-                  <span class="method-name">verifySearchBoxWorking_test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -293,14 +303,17 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sarang\eclipse-workspace\FirstCryAE\testng.xml</span>
+            <span class="header-content">C:\Users\Sarang\eclipse-workspace\TDDPOC\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; parallel=&quot;methods&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.qa.frisrcryae.listeners.ExtentReportListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.frisrcryae.tests.LandingPageTest&quot;/&gt;
     &lt;/classes&gt;
@@ -346,52 +359,52 @@ data.addRows(11);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyFirstCryParentingLinkOnHeader_test')
 data.setCell(0, 2, 'com.qa.frisrcryae.tests.LandingPageTest')
-data.setCell(0, 3, 9088);
+data.setCell(0, 3, 7201);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginToApp_test')
+data.setCell(1, 1, 'verifyShortListLinkOnHeader_test')
 data.setCell(1, 2, 'com.qa.frisrcryae.tests.LandingPageTest')
-data.setCell(1, 3, 5408);
+data.setCell(1, 3, 3124);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyRegisterLinkOnHeader_test')
+data.setCell(2, 1, 'verifyTrackOrderLinkOnHeader_test')
 data.setCell(2, 2, 'com.qa.frisrcryae.tests.LandingPageTest')
-data.setCell(2, 3, 3761);
+data.setCell(2, 3, 3050);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyTrackOrderLinkOnHeader_test')
+data.setCell(3, 1, 'verifyContactUsLinkOnHeader_test')
 data.setCell(3, 2, 'com.qa.frisrcryae.tests.LandingPageTest')
-data.setCell(3, 3, 3603);
+data.setCell(3, 3, 2802);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyShortListLinkOnHeader_test')
+data.setCell(4, 1, 'verifyPlaceHolder_test')
 data.setCell(4, 2, 'com.qa.frisrcryae.tests.LandingPageTest')
-data.setCell(4, 3, 3403);
+data.setCell(4, 3, 563);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyContactUsLinkOnHeader_test')
+data.setCell(5, 1, 'verifyRegisterLinkOnHeader_test')
 data.setCell(5, 2, 'com.qa.frisrcryae.tests.LandingPageTest')
-data.setCell(5, 3, 2239);
+data.setCell(5, 3, 259);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifySearchBoxWorking_test')
+data.setCell(6, 1, 'verifyFirstCryLogoOnHeader_test')
 data.setCell(6, 2, 'com.qa.frisrcryae.tests.LandingPageTest')
-data.setCell(6, 3, 783);
+data.setCell(6, 3, 147);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyPlaceHolder_test')
+data.setCell(7, 1, 'verifySearchBoxWorking_test')
 data.setCell(7, 2, 'com.qa.frisrcryae.tests.LandingPageTest')
-data.setCell(7, 3, 569);
+data.setCell(7, 3, 146);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifySearchBoxIsAvailable_test')
+data.setCell(8, 1, 'loginToApp_test')
 data.setCell(8, 2, 'com.qa.frisrcryae.tests.LandingPageTest')
-data.setCell(8, 3, 65);
+data.setCell(8, 3, 118);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyFirstCryLogoOnHeader_test')
+data.setCell(9, 1, 'verifySearchBoxIsAvailable_test')
 data.setCell(9, 2, 'com.qa.frisrcryae.tests.LandingPageTest')
-data.setCell(9, 3, 46);
+data.setCell(9, 3, 71);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'verifySignUpLink_test')
 data.setCell(10, 2, 'com.qa.frisrcryae.tests.LandingPageTest')
-data.setCell(10, 3, 20);
+data.setCell(10, 3, 35);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -423,136 +436,138 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifySignUpLink_test</span>
-                <span class="method-start">25797 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">25818 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">25821 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifySearchBoxIsAvailable_test</span>
-                <span class="method-start">35575 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">35641 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">35642 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifySearchBoxWorking_test</span>
-                <span class="method-start">44609 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">45393 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">45394 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyPlaceHolder_test</span>
-                <span class="method-start">54515 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">55084 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">55086 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">loginToApp_test</span>
-                <span class="method-start">65112 ms</span>
+                <span class="method-start">9426 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">70524 ms</span>
+                <span class="method-start">10188 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">70525 ms</span>
+                <span class="method-start">10810 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyContactUsLinkOnHeader_test</span>
-                <span class="method-start">80704 ms</span>
+                <span class="method-start">21447 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">82944 ms</span>
+                <span class="method-start">24251 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">82944 ms</span>
+                <span class="method-start">24909 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyTrackOrderLinkOnHeader_test</span>
-                <span class="method-start">93789 ms</span>
+                <span class="method-name">verifyFirstCryLogoOnHeader_test</span>
+                <span class="method-start">34833 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">97392 ms</span>
+                <span class="method-start">34983 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">97393 ms</span>
+                <span class="method-start">35730 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyFirstCryParentingLinkOnHeader_test</span>
-                <span class="method-start">108429 ms</span>
+                <span class="method-start">44559 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">117518 ms</span>
+                <span class="method-start">51763 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">117519 ms</span>
+                <span class="method-start">53024 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyRegisterLinkOnHeader_test</span>
-                <span class="method-start">130664 ms</span>
+                <span class="method-name">verifyPlaceHolder_test</span>
+                <span class="method-start">62919 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">134426 ms</span>
+                <span class="method-start">63484 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">134426 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyShortListLinkOnHeader_test</span>
-                <span class="method-start">147537 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">150940 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">150941 ms</span>
+                <span class="method-start">64156 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyFirstCryLogoOnHeader_test</span>
-                <span class="method-start">159529 ms</span>
+                <span class="method-name">verifyRegisterLinkOnHeader_test</span>
+                <span class="method-start">73928 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">159577 ms</span>
+                <span class="method-start">75265 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">76052 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchBoxIsAvailable_test</span>
+                <span class="method-start">87355 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">87428 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">88187 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifySearchBoxWorking_test</span>
+                <span class="method-start">97654 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">98323 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">98978 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyShortListLinkOnHeader_test</span>
+                <span class="method-start">108772 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">111898 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">112650 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySignUpLink_test</span>
+                <span class="method-start">121322 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">121358 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">121999 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyTrackOrderLinkOnHeader_test</span>
+                <span class="method-start">131154 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">134206 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

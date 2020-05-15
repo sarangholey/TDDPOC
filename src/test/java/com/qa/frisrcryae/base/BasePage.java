@@ -15,14 +15,30 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage {
-	
+
 	public WebDriver driver;
 	public Properties prop;
 	public OptionsManager optionsManager;
 
+	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
+
+	public static synchronized WebDriver getDriver() {
+		return tlDriver.get();
+	}
+	
+	
+	/**
+	 * This method is used to initialize the WebDriver on the basis of
+	 * browserName
+	 * 
+	 * @param browserName
+	 * @return this method will return driver instance
+	 */
 	public WebDriver init_driver(Properties prop) {
 		String browserName = null;
 		if (System.getProperty("browser") == null) {
@@ -37,22 +53,22 @@ public class BasePage {
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver(optionsManager.getChromeOptions());
+			tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver(optionsManager.getFirefoxOptions());
+			tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
 		} else if (browserName.equalsIgnoreCase("safari")) {
 			WebDriverManager.getInstance(SafariDriver.class).setup();
-			driver = new SafariDriver();
+			tlDriver.set(new SafariDriver());
 		} else {
 			System.out.println(browserName + " is not found, please pass the right browser Name");
 		}
 
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.get(prop.getProperty("url"));
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		return driver;
+		getDriver().manage().window().maximize();
+		getDriver().manage().deleteAllCookies();
+		getDriver().get(prop.getProperty("url"));
+		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		return getDriver();
 
 	}
 	
@@ -104,18 +120,18 @@ public class BasePage {
 	/**
 	 * take screenshot util
 	 */
-//	public String getScreenshot() {
-//		File src = ((TakesScreenshot) driver()).getScreenshotAs(OutputType.FILE);
-//		String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
-//		File destination = new File(path);
-//
-//		try {
-//			FileUtils.copyFile(src, destination);
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//
-//		return path;
-//	}
+	public String getScreenshot() {
+		File src = ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
+		String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		File destination = new File(path);
+
+		try {
+			FileUtils.copyFile(src, destination);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return path;
+	}
 
 }

@@ -6,7 +6,7 @@
       <class name="com.qa.frisrcryae.tests.LandingPageTest">
         <methods>
           <include name="setup"/>
-          <include name="verifyShortListLinkOnHeader_test"/>
+          <include name="verifySignUpLink_test"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.qa.frisrcryae.tests.LandingPageTest -->

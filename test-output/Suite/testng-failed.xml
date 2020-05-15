@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)" parallel="methods">
+  <listeners>
+    <listener class-name="com.qa.frisrcryae.listeners.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="com.qa.frisrcryae.tests.LandingPageTest">
         <methods>
-          <include name="verifyFirstCryLogoOnHeader_test"/>
           <include name="loginToApp_test"/>
           <include name="setup"/>
+          <include name="verifyRegisterLinkOnHeader_test"/>
           <include name="tearDown"/>
+          <include name="verifySearchBoxWorking_test"/>
         </methods>
       </class> <!-- com.qa.frisrcryae.tests.LandingPageTest -->
     </classes>
