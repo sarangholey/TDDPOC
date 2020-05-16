@@ -57,6 +57,11 @@ public class ElementActions {
 	public void doActionsClick(By locator) {
 		action.click(getElement(locator)).build().perform();
 	}
+	
+	public void dosActionMoveToElement(By locator) {
+		action.moveToElement(getElement(locator)).build().perform();
+	}
+	
 
 	public void doSendKeys(By locator, String value) {
 		getElement(locator).sendKeys(value);
@@ -74,6 +79,10 @@ public class ElementActions {
 		return getElement(locator).isDisplayed();
 	}
 
+	public boolean doIsSelected(By locator) {
+		return getElement(locator).isSelected();
+	}
+	
 	public String doGetText(By locator) {
 		return getElement(locator).getText();
 	}

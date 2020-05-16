@@ -6,6 +6,7 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 
 import com.qa.frisrcryae.base.BasePage;
 import com.qa.frisrcryae.utills.AppConstants;
@@ -18,28 +19,32 @@ public class LandingPage extends BasePage {
 	ElementActions elementActions;
 
 	// Locators
-	By loginBtn = By.xpath("//a[text()='Login ']");
-	By loginFrame = By.xpath("//iframe[@onload]");
-	By emailIdField = By.xpath("//input[@id='loginPhoneFlag']");
-	By loginWithPasswordBtn = By.xpath("//div[@id='loginWithPassBtn']");
-	By passwordField = By.xpath("//input[@id='txtLPass']");
-	By loginBtnAfterPass = By.xpath("//div[text()='Login']");
-	By myAccount = By.xpath("//span[text()='My Account']");
-	By searchBox = By.xpath("//input[@id='search_box']");
-	By searchList = By.xpath("//div[@id='searchlist']//li");
-	By placeHolderList = By.xpath("//div[@class='menu-container']//li");
+	private By loginBtn = By.xpath("//a[text()='Login ']");
+	private By loginFrame = By.xpath("//iframe[@onload]");
+	private By emailIdField = By.xpath("//input[@id='loginPhoneFlag']");
+	private By loginWithPasswordBtn = By.xpath("//div[@id='loginWithPassBtn']");
+	private By passwordField = By.xpath("//input[@id='txtLPass']");
+	private By loginBtnAfterPass = By.xpath("//div[text()='Login']");
+	private By myAccount = By.xpath("//span[text()='My Account']");
+	private By searchBox = By.xpath("//input[@id='search_box']");
+	private By searchList = By.xpath("//div[@id='searchlist']//li");
+	private By placeHolderList = By.xpath("//div[@class='menu-container']//li");
 	
-	By contactUsLink = By.xpath("//span[text()='Contact Us']");
-	By TrackOrderLink = By.xpath("//span[text()='Track Order']");
-	By FirstCryParentingLink = By.xpath("//span[text()='FirstCry Parenting']");
-	By RegisterLink = By.xpath("//a[text()=' Register']");
-	By RegisterFrame = By.xpath("//div[@id='main-con']/iframe");
-	By registerWithText = By.xpath("//p[text()='Or Register with']");
-	By ShortListLink = By.xpath("//span[text()='Shortlist']");
-	By FirstCryLogo = By.xpath("//img[@alt='logo']");
-	
-	
-	
+	private By contactUsLink = By.xpath("//span[text()='Contact Us']");
+	private By TrackOrderLink = By.xpath("//span[text()='Track Order']");
+	private By FirstCryParentingLink = By.xpath("//span[text()='FirstCry Parenting']");
+	private By RegisterLink = By.xpath("//a[text()=' Register']");
+	private By RegisterFrame = By.xpath("//div[@id='main-con']/iframe");
+	private By registerWithText = By.xpath("//p[text()='Or Register with']");
+	private By ShortListLink = By.xpath("//span[text()='Shortlist']");
+	private By FirstCryLogo = By.xpath("//img[@alt='logo']");
+	//footer links
+	private By Boys_ClothesLink = By.xpath("//a[text()='Boys Clothes']");  
+	private By Girls_ClothesLink = By.xpath("//a[text()='Girls Clothes']");
+	private By Baby_And_Kids_FootwearLink = By.xpath("//a[text()='Baby & Kids Footwear']");
+	private By Baby_And_Kids_ToysLink = By.xpath("//a[text()='Baby & Kids Toys']");
+	private By Kids_Books_And_CDsLink = By.xpath("//a[text()='Kids Books &  CDs']");
+	private By Baby_DiaperingLink = By.xpath("//a[text()='Baby Diapering']");
 	
 	// Constructor of page class:
 	public LandingPage(WebDriver driver) {
@@ -179,6 +184,107 @@ public class LandingPage extends BasePage {
 		return elementActions.doIsDisplayed(FirstCryLogo);
 	}
 	
+	public boolean verifyBoys_ClothesLink()
+	{
+		elementActions.waitForElementClickable(Boys_ClothesLink);
+		elementActions.doClick(Boys_ClothesLink);
+		elementActions.switchToWindowId(driver, 1);
+		String cuurentUrl = elementActions.doGetcurrentURL();
+		if(cuurentUrl.contains("boys-clothes"))
+		{
+			System.out.println("After clicking Boys_clothesLink current URL is -> " + cuurentUrl);
+			return true;
+		}
+		else {
+			System.out.println("After clicking Boys_clothesLink current URL is -> " + cuurentUrl);
+			return false;
+		}
+	}
+	
+	public boolean verifyGirls_ClothesLink()
+	{
+		elementActions.waitForElementClickable(Girls_ClothesLink);
+		elementActions.doClick(Girls_ClothesLink);
+		elementActions.switchToWindowId(driver, 1);
+		String cuurentUrl = elementActions.doGetcurrentURL();
+		if(cuurentUrl.contains("girls-clothes"))
+		{
+			System.out.println("After clicking Girls_ClothesLink current URL is -> " + cuurentUrl);
+			return true;
+		}
+		else {
+			System.out.println("After clicking Girls_ClothesLink current URL is -> " + cuurentUrl);
+			return false;
+		}
+	} 
+	
+	public boolean verifyBaby_And_Kids_FootwearLink()
+	{
+		elementActions.waitForElementClickable(Baby_And_Kids_FootwearLink);
+		elementActions.doClick(Baby_And_Kids_FootwearLink);
+		elementActions.switchToWindowId(driver, 1);
+		String cuurentUrl = elementActions.doGetcurrentURL();
+		if(cuurentUrl.contains("baby-kids-footwear"))
+		{
+			System.out.println("After clicking Baby_And_Kids_FootwearLink current URL is -> " + cuurentUrl);
+			return true;
+		}
+		else {
+			System.out.println("After clicking Baby_And_Kids_FootwearLink current URL is -> " + cuurentUrl);
+			return false;
+		}
+	}
+	
+	public boolean verifyBaby_And_Kids_ToysLink()
+	{
+		elementActions.waitForElementClickable(Baby_And_Kids_ToysLink);
+		elementActions.doClick(Baby_And_Kids_ToysLink);
+		elementActions.switchToWindowId(driver, 1);
+		String cuurentUrl = elementActions.doGetcurrentURL();
+		if(cuurentUrl.contains("baby-kids-toys-store"))
+		{
+			System.out.println("After clicking Baby_And_Kids_FootwearLink current URL is -> " + cuurentUrl);
+			return true;
+		}
+		else {
+			System.out.println("After clicking Baby_And_Kids_FootwearLink current URL is -> " + cuurentUrl);
+			return false;
+		}
+	} 
+	
+	public boolean verifyKids_Books_And_CDsLink()
+	{
+		elementActions.waitForElementClickable(Kids_Books_And_CDsLink);
+		elementActions.doClick(Kids_Books_And_CDsLink);
+		elementActions.switchToWindowId(driver, 1);
+		String cuurentUrl = elementActions.doGetcurrentURL();
+		if(cuurentUrl.contains("kids-books-cds"))
+		{
+			System.out.println("After clicking Baby_And_Kids_FootwearLink current URL is -> " + cuurentUrl);
+			return true;
+		}
+		else {
+			System.out.println("After clicking Baby_And_Kids_FootwearLink current URL is -> " + cuurentUrl);
+			return false;
+		}
+	} 
+	
+	public boolean verifyBaby_DiaperingLink()
+	{
+		elementActions.waitForElementClickable(Baby_DiaperingLink);
+		elementActions.doClick(Baby_DiaperingLink);
+		elementActions.switchToWindowId(driver, 1);
+		String cuurentUrl = elementActions.doGetcurrentURL();
+		if(cuurentUrl.contains("diapering"))
+		{
+			System.out.println("After clicking Baby_And_Kids_FootwearLink current URL is -> " + cuurentUrl);
+			return true;
+		}
+		else {
+			System.out.println("After clicking Baby_And_Kids_FootwearLink current URL is -> " + cuurentUrl);
+			return false;
+		}
+	}
 
 
 }

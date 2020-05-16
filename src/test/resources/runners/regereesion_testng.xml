@@ -9,6 +9,7 @@
 		<classes>
 			<class name="com.qa.frisrcryae.tests.MegaMenuProductsPageTest" />
 			<class name="com.qa.frisrcryae.tests.LandingPageTest" />
+			<class name="com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

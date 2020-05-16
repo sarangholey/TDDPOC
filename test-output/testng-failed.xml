@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.qa.frisrcryae.listeners.ExtentReportListener"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.frisrcryae.tests.LandingPageTest">
+      <class name="com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest">
         <methods>
-          <include name="loginToApp_test"/>
+          <include name="verifyBaby_DiaperingLink_test"/>
           <include name="setup"/>
-          <include name="verifyRegisterLinkOnHeader_test"/>
           <include name="tearDown"/>
-          <include name="verifySearchBoxWorking_test"/>
         </methods>
-      </class> <!-- com.qa.frisrcryae.tests.LandingPageTest -->
+      </class> <!-- com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
