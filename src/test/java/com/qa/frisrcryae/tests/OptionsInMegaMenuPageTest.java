@@ -30,7 +30,7 @@ public class OptionsInMegaMenuPageTest {
 	@Test(priority = 1, enabled = true)
 	public void verifyBoy_FashionSubmenu_test()
 	{
-		Assert.assertEquals(optionsInMegaMenuPage.verifyBoy_FashionSubmenu(), true);
+		Assert.assertEquals(optionsInMegaMenuPage.verifyBoy_FashionSubmenu(), false);
 	}
 	
 	@AfterMethod
