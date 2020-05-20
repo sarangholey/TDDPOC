@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -26,9 +27,9 @@ import com.qa.frisrcryae.base.BasePage;
 
 public class ExtentReportListener extends BasePage implements ITestListener {
 
-	//private static String currentDate = dateFormat();
+	private static String currentDate = dateFormat();
 	private static final String OUTPUT_FOLDER = "./build/";
-	private static final String FILE_NAME = "TestExecutionReport"+System.currentTimeMillis()+".html";
+	private static final String FILE_NAME = "TestExecutionReport-"+currentDate+"-"+System.currentTimeMillis()+".html";
 
 	private static ExtentReports extent = init();
 	public static ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
@@ -138,11 +139,11 @@ public class ExtentReportListener extends BasePage implements ITestListener {
 	
 	private static String dateFormat()
 	{
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
 		Date date = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
-		String stringDate = sdf.format(date);
-		String formattedDate = stringDate.replace("\\", "-");
-		return formattedDate;
+		System.out.println();
+		String StringDate = dateFormat.format(date);
+		return StringDate;
 	}
 	
 

@@ -6,26 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" parallel="classes">
     <classes>
-      <class name="com.qa.frisrcryae.tests.LandingPageTest">
+      <class name="com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest">
         <methods>
-          <include name="loginToApp_test"/>
-          <include name="setup"/>
-          <include name="verifyRegisterLinkOnHeader_test"/>
-          <include name="tearDown"/>
-          <include name="verifyGirls_ClothesLink_test"/>
-          <include name="verifyBoys_ClothesLink_test"/>
-          <include name="verifySearchBoxWorking_test"/>
-          <include name="verifyBaby_And_Kids_FootwearLink_test"/>
-        </methods>
-      </class> <!-- com.qa.frisrcryae.tests.LandingPageTest -->
-      <class name="com.qa.frisrcryae.tests.MegaMenuProductsPageTest">
-        <methods>
-          <include name="verifyBathFromMegaMenu_test"/>
+          <include name="verifyBoy_FashionSubmenu_test"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="verifyToysFromMegaMenu_test"/>
         </methods>
-      </class> <!-- com.qa.frisrcryae.tests.MegaMenuProductsPageTest -->
+      </class> <!-- com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

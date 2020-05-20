@@ -29,7 +29,7 @@ public class LandingPageTest {
 		prop = basePage.init_prop();
 		driver = basePage.init_driver(prop);
 		landingPage = new LandingPage(driver);
-		log.getLogger(LandingPageTest.class);
+		//log.getLogger(LandingPageTest.class);
 	}
 	
 	@Test(priority = 1, enabled=true)
