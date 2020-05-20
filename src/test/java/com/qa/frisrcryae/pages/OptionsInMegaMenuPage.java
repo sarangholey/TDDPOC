@@ -21,7 +21,6 @@ public class OptionsInMegaMenuPage extends BasePage {
 	// Locators
 	private By Boy_FashionFromMegaMenu = By.xpath("//a[text()=' Boy Fashion']");
 	private By Boy_FashionSubmenu = By.xpath("//a[text()='Shop By Category']/ancestor::ul//li/a[text()='"+text+"']");
-	//private By checkBox = By.xpath("//span[contains(text(),'"+text+"')]/ancestor::a/span[@data-icon=\"Y\"]");
 	private By checkBox = By.xpath("//a[contains(text(),'"+text+"')]/ancestor::div//div[text()='SUBCATEGORIES :']");
 	
 	

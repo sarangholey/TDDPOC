@@ -1,6 +1,8 @@
 package com.qa.frisrcryae.tests;
 
 import java.util.Properties;
+
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -18,6 +20,7 @@ public class LandingPageTest {
 	Properties prop;
 	BasePage basePage;
 	LandingPage landingPage;
+	Logger log;
 	
 	@BeforeMethod
 	public void setup()
@@ -26,10 +29,12 @@ public class LandingPageTest {
 		prop = basePage.init_prop();
 		driver = basePage.init_driver(prop);
 		landingPage = new LandingPage(driver);
+		log.getLogger(LandingPageTest.class);
 	}
 	
 	@Test(priority = 1, enabled=true)
-	public void verifySignUpLink_test() {
+	public void verifyLandingPageTitle_test() {
+		log.info("Test logger");
 		Assert.assertEquals(landingPage.getLandingPageTitle(), AppConstants.LANDING_PAGE_TITLE);
 	}
 	
@@ -132,6 +137,14 @@ public class LandingPageTest {
 		
 		Assert.assertEquals(landingPage.verifyBaby_DiaperingLink(), true);
 	}
+	
+	@Test(priority = 18, enabled = true)
+	public void verifyBrokenLinksCountOnLandingPage_test()
+	{
+		landingPage.verifyBrokenLinksCountOnLandingPage();
+		//Assert.assertEquals(landingPage.verifyLinksCountOnLandingPage(), true);
+	}
+	
 	
 	@AfterMethod
 	public void tearDown()

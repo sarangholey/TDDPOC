@@ -26,7 +26,7 @@ import com.qa.frisrcryae.base.BasePage;
 
 public class ExtentReportListener extends BasePage implements ITestListener {
 
-	
+	//private static String currentDate = dateFormat();
 	private static final String OUTPUT_FOLDER = "./build/";
 	private static final String FILE_NAME = "TestExecutionReport"+System.currentTimeMillis()+".html";
 
@@ -49,7 +49,7 @@ public class ExtentReportListener extends BasePage implements ITestListener {
 		htmlReporter.config().setDocumentTitle("Automation Test Results");
 		htmlReporter.config().setReportName("Automation Test Results");
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
-		htmlReporter.config().setTheme(Theme.STANDARD);
+		htmlReporter.config().setTheme(Theme.DARK);
 
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
@@ -134,6 +134,15 @@ public class ExtentReportListener extends BasePage implements ITestListener {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTimeInMillis(millis);
 		return calendar.getTime();
+	}
+	
+	private static String dateFormat()
+	{
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
+		String stringDate = sdf.format(date);
+		String formattedDate = stringDate.replace("\\", "-");
+		return formattedDate;
 	}
 	
 

@@ -28,7 +28,7 @@ public class OptionsInMegaMenuPageTest {
 	}
 	
 	@Test(priority = 1, enabled = true)
-	public void verifyBaby_DiaperingLink_test()
+	public void verifyBoy_FashionSubmenu_test()
 	{
 		Assert.assertEquals(optionsInMegaMenuPage.verifyBoy_FashionSubmenu(), true);
 	}
@@ -36,7 +36,7 @@ public class OptionsInMegaMenuPageTest {
 	@AfterMethod
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

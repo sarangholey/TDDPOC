@@ -3,6 +3,7 @@ package com.qa.frisrcryae.pages;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +18,8 @@ public class LandingPage extends BasePage {
 	WebDriver driver;
 	Properties prop;
 	ElementActions elementActions;
+	
+	Logger log = Logger.getLogger(LandingPage.class);
 
 	// Locators
 	private By loginBtn = By.xpath("//a[text()='Login ']");
@@ -55,7 +58,11 @@ public class LandingPage extends BasePage {
 
 	// Page action/methods
 	public String getLandingPageTitle() {
+		log.info("Launching URL");
+		log.info("Application Title is - " +
+				elementActions.doGetPageTitle("Baby Products Online UAE, Kids Online Shopping, Baby Care Products at FirstCry.ae"));
 		return elementActions.doGetPageTitle("Baby Products Online UAE, Kids Online Shopping, Baby Care Products at FirstCry.ae");
+		
 	}
 
 	public boolean verifyLoginBtnIsAvailable() {
@@ -284,6 +291,22 @@ public class LandingPage extends BasePage {
 			System.out.println("After clicking Baby_And_Kids_FootwearLink current URL is -> " + cuurentUrl);
 			return false;
 		}
+	}
+	
+	public void verifyBrokenLinksCountOnLandingPage()
+	{
+		int countOfBrokenLinks=0;
+		List<WebElement> listOfLinks =  elementActions.getTagCount("a", driver);
+		for(int i=0;i<listOfLinks.size();i++)
+		{
+			System.out.println(listOfLinks.get(i).getAttribute("href"));
+//			if((listOfLinks.get(i).getAttribute("href").equals("")))
+//			{
+//				countOfBrokenLinks = countOfBrokenLinks + 1;
+//			}
+		}
+		System.out.println("The Count of brokenLinks is - " + countOfBrokenLinks);
+		
 	}
 
 

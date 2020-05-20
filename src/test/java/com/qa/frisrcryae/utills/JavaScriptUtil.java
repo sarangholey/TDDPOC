@@ -78,6 +78,7 @@ public class JavaScriptUtil {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
+	
 
 	public String getBrowserInfo() {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);

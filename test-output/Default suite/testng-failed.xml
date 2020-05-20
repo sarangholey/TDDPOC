@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest">
+      <class name="com.qa.frisrcryae.tests.LandingPageTest">
         <methods>
-          <include name="verifyBaby_DiaperingLink_test"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="verifyBrokenLinksCountOnLandingPage_test"/>
         </methods>
-      </class> <!-- com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest -->
+      </class> <!-- com.qa.frisrcryae.tests.LandingPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

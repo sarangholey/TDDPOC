@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26951" started-at="2020-05-16T16:21:18Z" finished-at="2020-05-16T16:21:45Z">
+  <suite name="Suite" duration-ms="28952" started-at="2020-05-20T09:49:48Z" finished-at="2020-05-20T09:50:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26951" started-at="2020-05-16T16:21:18Z" finished-at="2020-05-16T16:21:45Z">
+    <test name="Test" duration-ms="28952" started-at="2020-05-20T09:49:48Z" finished-at="2020-05-20T09:50:17Z">
       <class name="com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest@77caeb3e]" name="setup" is-config="true" duration-ms="17670" started-at="2020-05-16T16:21:18Z" finished-at="2020-05-16T16:21:36Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest@61df66b6]" name="setup" is-config="true" duration-ms="15942" started-at="2020-05-20T09:49:48Z" finished-at="2020-05-20T09:50:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyBaby_DiaperingLink_test()[pri:1, instance:com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest@77caeb3e]" name="verifyBaby_DiaperingLink_test" duration-ms="9254" started-at="2020-05-16T16:21:36Z" finished-at="2020-05-16T16:21:45Z">
+        <test-method status="PASS" signature="verifyBoy_FashionSubmenu_test()[pri:1, instance:com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest@61df66b6]" name="verifyBoy_FashionSubmenu_test" duration-ms="12286" started-at="2020-05-20T09:50:04Z" finished-at="2020-05-20T09:50:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyBaby_DiaperingLink_test -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest@77caeb3e]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-05-16T16:21:45Z" finished-at="2020-05-16T16:21:45Z">
+        </test-method> <!-- verifyBoy_FashionSubmenu_test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest@61df66b6]" name="tearDown" is-config="true" duration-ms="663" started-at="2020-05-20T09:50:16Z" finished-at="2020-05-20T09:50:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

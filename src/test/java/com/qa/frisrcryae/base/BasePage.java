@@ -64,7 +64,9 @@ public class BasePage {
 			System.out.println(browserName + " is not found, please pass the right browser Name");
 		}
 
-		getDriver().manage().window().maximize();
+		if(prop.getProperty("maximize").equals("yes")) {
+			getDriver().manage().window().maximize();
+		}
 		getDriver().manage().deleteAllCookies();
 		getDriver().get(prop.getProperty("url"));
 		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

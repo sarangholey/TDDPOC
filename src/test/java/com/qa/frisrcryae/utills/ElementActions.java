@@ -128,6 +128,12 @@ public class ElementActions {
 		driver.switchTo().window(windowList.get(windowNumber));
 	}
 	
+	public List<WebElement> getTagCount(String htmlTagName, WebDriver driver)
+	{
+		List<WebElement> tagList = driver.findElements(By.tagName(htmlTagName));
+		return tagList;
+	}
+	
 
 }
 	
