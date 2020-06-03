@@ -18,7 +18,7 @@ public class OptionsInMegaMenuPageTest {
 	BasePage basePage;
 	OptionsInMegaMenuPage optionsInMegaMenuPage;
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setup()
 	{
 		basePage = new BasePage();
@@ -27,13 +27,13 @@ public class OptionsInMegaMenuPageTest {
 		optionsInMegaMenuPage = new OptionsInMegaMenuPage(driver);
 	}
 	
-	@Test(priority = 1, enabled = true)
+	@Test//(priority = 1, enabled = true)
 	public void verifyBoy_FashionSubmenu_test()
 	{
 		Assert.assertEquals(optionsInMegaMenuPage.verifyBoy_FashionSubmenu(), false);
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void tearDown()
 	{
 		driver.quit();

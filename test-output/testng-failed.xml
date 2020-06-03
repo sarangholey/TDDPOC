@@ -2,10 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="com.qa.frisrcryae.listeners.ExtentReportListener"/>
+    <listener class-name="com.qa.frisrcryae.listeners.TesultsListener"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)" parallel="classes">
+  <test thread-count="5" name="Test(failed)" parallel="methods">
     <classes>
+      <class name="com.qa.frisrcryae.tests.MegaMenuProductsPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyBoys_ClothesLink_test"/>
+        </methods>
+      </class> <!-- com.qa.frisrcryae.tests.MegaMenuProductsPageTest -->
       <class name="com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest">
         <methods>
           <include name="verifyBoy_FashionSubmenu_test"/>
@@ -13,6 +20,17 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest -->
+      <class name="com.qa.frisrcryae.tests.LandingPageTest">
+        <methods>
+          <include name="loginToApp_test"/>
+          <include name="setup"/>
+          <include name="verifyRegisterLinkOnHeader_test"/>
+          <include name="verifyShortListLinkOnHeader_test"/>
+          <include name="tearDown"/>
+          <include name="verifySearchBoxWorking_test"/>
+          <include name="verifyContactUsLinkOnHeader_test"/>
+        </methods>
+      </class> <!-- com.qa.frisrcryae.tests.LandingPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

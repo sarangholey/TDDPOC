@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="33866" started-at="2020-05-20T14:53:37Z" finished-at="2020-05-20T14:54:11Z">
+  <suite name="Somoke Tests" duration-ms="6" started-at="2020-06-03T07:26:53Z" finished-at="2020-06-03T07:26:53Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="33866" started-at="2020-05-20T14:53:37Z" finished-at="2020-05-20T14:54:11Z">
-      <class name="com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest@61df66b6]" name="setup" is-config="true" duration-ms="23211" started-at="2020-05-20T14:53:37Z" finished-at="2020-05-20T14:54:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyBoy_FashionSubmenu_test()[pri:1, instance:com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest@61df66b6]" name="verifyBoy_FashionSubmenu_test" duration-ms="9623" started-at="2020-05-20T14:54:01Z" finished-at="2020-05-20T14:54:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyBoy_FashionSubmenu_test -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest@61df66b6]" name="tearDown" is-config="true" duration-ms="986" started-at="2020-05-20T14:54:10Z" finished-at="2020-05-20T14:54:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.frisrcryae.tests.OptionsInMegaMenuPageTest -->
+    <test name="Test" duration-ms="6" started-at="2020-06-03T07:26:53Z" finished-at="2020-06-03T07:26:53Z">
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- Somoke Tests -->
 </testng-results>
